@@ -15,7 +15,8 @@ const myCreatedRoute = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Home />
+                element: <Home />,
+                loader: () => fetch('http://localhost:5000/foods'), 
             },
             {
                 path: '/availableFoods',
