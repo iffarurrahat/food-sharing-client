@@ -2,8 +2,17 @@ import PropTypes from 'prop-types';
 import { NavLink } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import Container from '../../ui/Container';
+import { useContext } from 'react';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Navbar = ({ children }) => {
+
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
 
     const navLink = <>
         <span>
@@ -21,9 +30,30 @@ const Navbar = ({ children }) => {
         <span>
             <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-black pb-[3px]' : ''} to='/foodRequest'>My Food Request</NavLink>
         </span>
-        <span>
-            <NavLink to='/login'>Login</NavLink>
-        </span>
+        {/* {
+            user?.email ? <span><button onClick={handleLogOut}>Logout</button></span> :
+                <span> <NavLink to='/login'>Login</NavLink></span>
+        } */}
+
+        {
+            user?.email ?
+                <div className="dropdown dropdown-bottom dropdown-end">
+                    <label tabIndex={0}>
+                        {/* avatar */}
+                        <div className="avatar cursor-pointer">
+                            <div className="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                <img src={user.photoURL} />
+                            </div>
+                        </div>
+                    </label>
+                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>{user?.displayName}</a></li>
+                        <li onClick={handleLogOut}><a>Logout</a></li>
+                    </ul>
+                </div> :
+                <span> <NavLink to='/login'>Login</NavLink></span>
+        }
+
     </>
 
     return (
