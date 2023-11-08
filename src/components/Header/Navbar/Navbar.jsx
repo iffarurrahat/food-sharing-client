@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
 import { NavLink } from "react-router-dom";
 import Logo from "../Logo/Logo";
+import Container from '../../ui/Container';
 
 const Navbar = ({ children }) => {
 
@@ -20,7 +22,7 @@ const Navbar = ({ children }) => {
             <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-black pb-[3px]' : ''} to='/foodRequest'>My Food Request</NavLink>
         </span>
         <span>
-            <NavLink  to='/login'>Login</NavLink>
+            <NavLink to='/login'>Login</NavLink>
         </span>
     </>
 
@@ -30,7 +32,7 @@ const Navbar = ({ children }) => {
             <div className="drawer-content flex flex-col">
                 {/* Navbar */}
                 <div className="w-full navbar bg-base-300">
-                    <div className="w-full max-w-screen-xl mx-auto">
+                    <Container>
                         <div className="flex-none md:hidden">
                             <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -43,7 +45,7 @@ const Navbar = ({ children }) => {
                                 {navLink}
                             </div>
                         </div>
-                    </div>
+                    </Container>
                 </div>
                 {/* Page content here */}
                 {children}
@@ -57,6 +59,10 @@ const Navbar = ({ children }) => {
             </div>
         </div>
     );
+};
+
+Navbar.propTypes = {
+    children: PropTypes.node
 };
 
 export default Navbar;
