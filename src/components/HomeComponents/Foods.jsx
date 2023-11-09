@@ -3,12 +3,12 @@ import FoodsCard from "./FoodsCard";
 
 const Foods = ({ foods }) => {
 
-
+    console.log(foods);
 
     return (
         <div className="py-10">
             <div className="text-center mb-8">
-                <h2 className=" text-3xl font-bold mb-5">Featured Foods</h2>
+                <h2 className=" text-3xl font-bold mb-5">Featured <span className="text-[#F89223]">Foods</span></h2>
                 <p>Empowering Communities to Share Surplus Food and Reduce <br /> Waste through a Dedicated Platform in Bangladesh.</p>
             </div>
             <Container>

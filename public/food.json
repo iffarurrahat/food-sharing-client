@@ -1,20 +1,7 @@
 [
     {
-        "_id": "654bdf824ac432447031e9e7",
-        "foodName:": "Rice and Lentils",
-        "quantity": "76",
-        "photo": "https://i.ibb.co/BCSX0Q0/rice-and-lentils.jpg",
-        "location": "Dhaka, Bangladesh",
-        "date": "2023-11-11",
-        "status": "available",
-        "notes": "This generous donation of rice and lentils is a heartfelt contribution from a well-known local restaurant in Dhaka. The restaurant has always been dedicated to reducing food waste and helping those in need. The food is fresh, wholesome, and nutritious, ensuring that it will serve as a lifeline for many underprivileged families in the area.\n\nThe restaurant's staff is proud to be a part of a community initiative that aims to provide for those who are less fortunate. They understand the importance of supporting their fellow citizens, especially during challenging times. The donated food will help sustain families by providing them with essential nourishment. \n\nThe motive behind this contribution is to reduce food surplus and ensure that quality food does not go to waste. It's an environmentally conscious decision as well, as food waste contributes to various ecological issues. The restaurant believes that small steps like this can make a significant difference in minimizing food waste in Bangladesh.\n\nThis act of kindness showcases the spirit of unity and compassion in the community, and the restaurant hopes that this donation will inspire others to join the cause. By providing nutritious food to those in need, we can help create a more food-secure and sustainable future for all.",
-        "email": "contact.akbor@gmail.com",
-        "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocKj2W6axIzTROs8lJvhA-HGqXEjpeXk2TkAXMjhHkbt=s96-c",
-        "userName": "ali akbor"
-    },
-    {
         "_id": "654be0fa4ac432447031e9e8",
-        "foodName:": "Vegetable Curry",
+        "foodName": "Vegetable Curry",
         "quantity": "32",
         "photo": "https://i.ibb.co/fpyVVhM/vegetable-curry.jpg",
         "location": "Chittagong, Bangladesh",
@@ -27,7 +14,7 @@
     },
     {
         "_id": "654be25f4ac432447031e9e9",
-        "foodName:": "Chicken Biryani",
+        "foodName": "Chicken Biryani",
         "quantity": "14",
         "photo": "https://i.ibb.co/3778wxK/chicken-biryani.jpg",
         "location": "Sylhet, Bangladesh",
@@ -40,7 +27,7 @@
     },
     {
         "_id": "654be4ba4ac432447031e9ea",
-        "foodName:": "Milk and Cookies",
+        "foodName": "Milk and Cookies",
         "quantity": "121",
         "photo": "https://i.ibb.co/6NBtDWL/milk-and-cookies.jpg",
         "location": "Khulna, Bangladesh",
@@ -53,7 +40,7 @@
     },
     {
         "_id": "654be55f4ac432447031e9eb",
-        "foodName:": "Fruit Salad",
+        "foodName": "Fruit Salad",
         "quantity": "83",
         "photo": "https://i.ibb.co/7QgqXXN/fruit-salad.jpg",
         "location": "Rajshahi, Bangladesh",
@@ -66,7 +53,7 @@
     },
     {
         "_id": "654be6174ac432447031e9ec",
-        "foodName:": "Dhal and Vegetables",
+        "foodName": "Dhal and Vegetables",
         "quantity": "55",
         "photo": "https://i.ibb.co/94ZPfsm/dhal-and-vegetables.jpg",
         "location": "Rangpur, Bangladesh",
@@ -78,26 +65,16 @@
         "userName": "ali akbor"
     },
     {
-        "_id": "654cf4e5f20912f4660c31e1",
-        "foodName:": "rojoni",
+        "_id": "654d0f35f20912f4660c31e4",
+        "foodName": "Rice and Lentils",
         "quantity": "1532",
-        "photo": "https://i.ibb.co/Vww5Xq6/2.jpg",
-        "location": "Dhaka, Bangladesh",
-        "date": "2023-11-10",
-        "notes": "lorem ipsum",
-        "status": "available"
-    },
-    {
-        "_id": "654cf56bf20912f4660c31e2",
-        "foodName:": "Ali",
-        "quantity": "17",
-        "photo": "https://i.ibb.co/94ZPfsm/dhal-and-vegetables.jpg",
+        "photo": "https://i.ibb.co/BCSX0Q0/rice-and-lentils.jpg",
         "location": "Chittagong, Bangladesh",
-        "date": "2023-11-20",
-        "notes": "hello hi bro",
+        "date": "2023-11-11",
+        "notes": "This generous donation of rice and lentils is a heartfelt contribution from a well-known local restaurant in Dhaka. The restaurant has always been dedicated to reducing food waste and helping those in need. The food is fresh, wholesome, and nutritious, ensuring that it will serve as a lifeline for many underprivileged families in the area.\\n\\nThe restaurant's staff is proud to be a part of a community initiative that aims to provide for those who are less fortunate. They understand the importance of supporting their fellow citizens, especially during challenging times. The donated food will help sustain families by providing them with essential nourishment. \\n\\nThe motive behind this contribution is to reduce food surplus and ensure that quality food does not go to waste. It's an environmentally conscious decision as well, as food waste contributes to various ecological issues. The restaurant believes that small steps like this can make a significant difference in minimizing food waste in Bangladesh.\\n\\nThis act of kindness showcases the spirit of unity and compassion in the community, and the restaurant hopes that this donation will inspire others to join the cause. By providing nutritious food to those in need, we can help create a more food-secure and sustainable future for all.\",\n\"email\": \"contact.akbor@gmail.com",
         "status": "available",
-        "email": "contact.akbor@gmail.com",
-        "userPhoto": "https://lh3.googleusercontent.com/a/ACg8ocKj2W6axIzTROs8lJvhA-HGqXEjpeXk2TkAXMjhHkbt=s96-c",
-        "userName": "ali akbor"
+        "email": "rojoni@klanto.com",
+        "userPhoto": "https://i.ibb.co/Vww5Xq6/2.jpg",
+        "userName": "rojoni"
     }
 ]

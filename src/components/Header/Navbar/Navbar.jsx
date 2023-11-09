@@ -16,19 +16,19 @@ const Navbar = ({ children }) => {
 
     const navLink = <>
         <span>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-black pb-[3px]' : ''} to='/'>Home</NavLink>
+            <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-[#F89223] pb-[3px]' : ''} to='/'>Home</NavLink>
         </span>
         <span>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-black pb-[3px]' : ''} to='/availableFoods'>Available Foods</NavLink>
+            <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-[#F89223] pb-[3px]' : ''}       to='/availableFoods'>Available Foods</NavLink>
         </span>
         <span>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-black pb-[3px]' : ''} to='/addFood'>Add Food</NavLink>
+            <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-[#F89223] pb-[3px]' : ''}       to='/addFood'>Add Food</NavLink>
         </span>
         <span>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-black pb-[3px]' : ''} to='/manageFood'>Manage My Foods</NavLink>
+            <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-[#F89223] pb-[3px]' : ''}       to='/manageFood'>Manage My Foods</NavLink>
         </span>
         <span>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-black pb-[3px]' : ''} to='/foodRequest'>My Food Request</NavLink>
+            <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-[#F89223] pb-[3px]' : ''}       to='/foodRequest'>My Food Request</NavLink>
         </span>
 
         {
@@ -53,11 +53,11 @@ const Navbar = ({ children }) => {
     </>
 
     return (
-        <div className="drawer">
+        <div className="drawer absolute">
             <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col">
                 {/* Navbar */}
-                <div className="w-full navbar bg-base-300">
+                <div className="w-full navbar bg-base-200">
                     <Container>
                         <div className="flex-none md:hidden">
                             <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">

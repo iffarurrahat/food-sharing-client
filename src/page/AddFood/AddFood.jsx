@@ -97,29 +97,6 @@ const AddFood = () => {
                         <textarea name="notes" className="textarea textarea-bordered" placeholder="Give me details" required></textarea>
                     </div>
                 </div>
-                {/* input donator_name and donator_img,  */}
-                {/* <div className="md:flex gap-5">
-                    <div className="form-control flex-1">
-                        <label className="label">
-                            <span className="label-text">Donator Name</span>
-                        </label>
-                        <input type="text" defaultValue={user?.displayName} placeholder="Donator Name" className="input input-bordered" required />
-                    </div>
-                    <div className="form-control flex-1">
-                        <label className="label">
-                            <span className="label-text">Donator Image</span>
-                        </label>
-                        <input type="text" defaultValue={user?.photoURL} placeholder="Donator Image URL" className="input input-bordered" required />
-                    </div>
-                </div> */}
-                {/* input donator_email */}
-                {/* <div className="form-control flex-1">
-                    <label className="label">
-                        <span className="label-text">Donator Email</span>
-                    </label>
-                    <input type="text" defaultValue={user?.email} placeholder="Donator Email" className="input input-bordered" required />
-                </div> */}
-
                 <div className="form-control mt-6">
                     <button className="btn btn-primary">Add a Food</button>
                 </div>

@@ -20,7 +20,7 @@ const FoodCardDetails = () => {
     console.log(food);
 
     return (
-        <div className="max-w-screen-xl mx-auto px-2 md:px-4 lg:px-1 my-5 md:my-10 lg:my-20">
+        <div className="max-w-screen-xl mx-auto px-2 md:px-4 lg:px-1 py-5 md:py-10 lg:py-20">
             <div className="">
                 <img src={photo} alt="" className="mb-4 mx-auto" />
                 <div className="bg-slate-100 p-4">

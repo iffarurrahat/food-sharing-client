@@ -1,0 +1,7 @@
+.available__foods-img {
+    background-image: url('https://i.ibb.co/gZ7Md5n/available-foods-img.jpg'),
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

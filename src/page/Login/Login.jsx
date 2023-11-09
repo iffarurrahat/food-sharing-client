@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { FcGoogle } from 'react-icons/fc';
 import Swal from "sweetalert2";
 
 const Login = () => {
@@ -84,10 +85,9 @@ const Login = () => {
                         </div>
                     </form>
                 </div>
-                <div className="text-center py-3">
+                <div className="text-center py-3 mb-3">
                     <div onClick={handleGoogleSignIn} className="border-2 border-red-600 rounded-full p-1 inline-block mr-3 cursor-pointer">
-                        {/* <FcGoogle className="text-2xl"></FcGoogle> */}
-                        <h3 className="text-white px-8">Google</h3>
+                        <h3 className="text-white px-8 flex items-center gap-3"><FcGoogle className="text-2xl" /> Login with Google</h3>
                     </div>
                 </div>
             </div>

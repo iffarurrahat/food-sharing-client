@@ -22,12 +22,13 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: '/food/:id',
-                element: <FoodCardDetails />,
+                element: <PrivateRoute><FoodCardDetails /></PrivateRoute>,
                 loader: () => fetch('http://localhost:5000/foods'),
             },
             {
                 path: '/availableFoods',
-                element: <AvailableFoods />
+                element: <AvailableFoods />,
+                loader: () => fetch('http://localhost:5000/foods'),
             },
             {
                 path: '/addFood',
