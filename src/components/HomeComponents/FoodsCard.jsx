@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 
 const FoodsCard = ({ food }) => {
-
-    const { _id, name, photo, quantity, location, date, notes } = food;
+    console.log(food);
+    const { _id, foodName, photo, quantity, location, date, notes, userName, userPhoto } = food || {};
+    console.log(foodName);
 
     return (
         <div className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-md p-6">
@@ -11,14 +12,14 @@ const FoodsCard = ({ food }) => {
             </div>
             <div className="relative flex items-center gap-4 pt-0 pb-8 mx-0 mt-4 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
                 <img
-                    src={photo}
+                    src={userPhoto}
                     alt="tania andrew"
                     className="relative inline-block h-[50px] w-[50px] !rounded-full object-cover object-center"
                 />
                 <div className="flex w-full flex-col gap-0.5">
                     <div className="flex items-center justify-between">
                         <h5 className="block font-sans text-lg antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                            {name}
+                            {userName}
                         </h5>
                         <div className="flex items-center gap-0 5">
                             <p>{date}</p>
@@ -30,6 +31,7 @@ const FoodsCard = ({ food }) => {
                 </div>
             </div>
             <div className="p-0 mb-6">
+                <h5 className="block font-sans text-lg antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">Food Name: {foodName} </h5>
                 <p className="mb-3">Quantity: {quantity}</p>
                 <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
                     {notes.slice(0, 120)}...

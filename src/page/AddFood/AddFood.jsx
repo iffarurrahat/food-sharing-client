@@ -10,7 +10,7 @@ const AddFood = () => {
     const handleAddFood = e => {
         e.preventDefault();
         const form = e.target;
-        const name = form.name.value;
+        const foodName = form.name.value;
         const quantity = form.quantity.value;
         const photo = form.photo.value;
         const location = form.location.value;
@@ -18,7 +18,7 @@ const AddFood = () => {
         const notes = form.notes.value;
         // console.log(name, quantity, photo, location, date, notes);
 
-        const newFoods = { name, quantity, photo, location, date, notes, status: "available" }
+        const newFoods = { foodName, quantity, photo, location, date, notes, status: "available", email : user?.email, userPhoto: user?.photoURL, userName: user?.displayName }
 
         fetch('http://localhost:5000/foods', {
             method: 'POST',
@@ -55,7 +55,7 @@ const AddFood = () => {
                         <label className="label">
                             <span className="label-text">Food Name</span>
                         </label>
-                        <input type="text" name="name" placeholder="Food Name" className="input input-bordered" required />
+                        <input type="text" name="foodName" placeholder="Food Name" className="input input-bordered" required />
                     </div>
                     <div className="form-control flex-1">
                         <label className="label">
@@ -98,7 +98,7 @@ const AddFood = () => {
                     </div>
                 </div>
                 {/* input donator_name and donator_img,  */}
-                <div className="md:flex gap-5">
+                {/* <div className="md:flex gap-5">
                     <div className="form-control flex-1">
                         <label className="label">
                             <span className="label-text">Donator Name</span>
@@ -111,14 +111,14 @@ const AddFood = () => {
                         </label>
                         <input type="text" defaultValue={user?.photoURL} placeholder="Donator Image URL" className="input input-bordered" required />
                     </div>
-                </div>
+                </div> */}
                 {/* input donator_email */}
-                <div className="form-control flex-1">
+                {/* <div className="form-control flex-1">
                     <label className="label">
                         <span className="label-text">Donator Email</span>
                     </label>
                     <input type="text" defaultValue={user?.email} placeholder="Donator Email" className="input input-bordered" required />
-                </div>
+                </div> */}
 
                 <div className="form-control mt-6">
                     <button className="btn btn-primary">Add a Food</button>

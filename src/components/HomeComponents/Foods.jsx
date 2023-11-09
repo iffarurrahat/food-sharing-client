@@ -3,6 +3,8 @@ import FoodsCard from "./FoodsCard";
 
 const Foods = ({ foods }) => {
 
+
+
     return (
         <div className="py-10">
             <div className="text-center mb-8">
