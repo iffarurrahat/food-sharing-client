@@ -30,10 +30,6 @@ const Navbar = ({ children }) => {
         <span>
             <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-black pb-[3px]' : ''} to='/foodRequest'>My Food Request</NavLink>
         </span>
-        {/* {
-            user?.email ? <span><button onClick={handleLogOut}>Logout</button></span> :
-                <span> <NavLink to='/login'>Login</NavLink></span>
-        } */}
 
         {
             user?.email ?
@@ -42,7 +38,7 @@ const Navbar = ({ children }) => {
                         {/* avatar */}
                         <div className="avatar cursor-pointer">
                             <div className="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                <img src={user.photoURL} />
+                                <img src={user?.photoURL} />
                             </div>
                         </div>
                     </label>

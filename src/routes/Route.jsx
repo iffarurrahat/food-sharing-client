@@ -7,6 +7,7 @@ import FoodRequest from "../page/FoodRequest/FoodRequest";
 import ManageFoods from "../page/ManageFoods/ManageFoods";
 import Login from "../page/Login/Login";
 import Register from "../page/Register/Register";
+import FoodCardDetails from "../components/HomeComponents/FoodCardDetails";
 
 const myCreatedRoute = createBrowserRouter([
     {
@@ -16,7 +17,12 @@ const myCreatedRoute = createBrowserRouter([
             {
                 index: true,
                 element: <Home />,
-                loader: () => fetch('http://localhost:5000/foods'), 
+                loader: () => fetch('http://localhost:5000/foods'),
+            },
+            {
+                path: '/food/:id',
+                element: <FoodCardDetails />,
+                loader: () => fetch('http://localhost:5000/foods'),
             },
             {
                 path: '/availableFoods',

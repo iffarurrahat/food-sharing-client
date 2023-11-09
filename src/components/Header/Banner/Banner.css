@@ -1,0 +1,9 @@
+
+.banner_img{
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('https://i.ibb.co/DzrR6nL/banner-image.jpg') ,
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

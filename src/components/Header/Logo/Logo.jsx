@@ -3,7 +3,7 @@
 const Logo = () => {
     return (
         <div>
-            Food Slogan
+           <p className="text-2xl font-bold">Food Slogan</p>
         </div>
     );
 };
