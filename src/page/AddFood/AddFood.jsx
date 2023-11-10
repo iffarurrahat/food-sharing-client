@@ -20,7 +20,7 @@ const AddFood = () => {
 
         const newFoods = { foodName, quantity, photo, location, date, notes, status: "available", email : user?.email, userPhoto: user?.photoURL, userName: user?.displayName }
 
-        fetch('http://localhost:5000/foods', {
+        fetch('https://food-sharing-94c7e.web.app/foods', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

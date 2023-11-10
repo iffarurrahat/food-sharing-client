@@ -18,17 +18,17 @@ const myCreatedRoute = createBrowserRouter([
             {
                 index: true,
                 element: <Home />,
-                loader: () => fetch('http://localhost:5000/foods'),
+                loader: () => fetch('https://food-sharing-94c7e.web.app/foods'),
             },
             {
                 path: '/food/:id',
                 element: <PrivateRoute><FoodCardDetails /></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/foods'),
+                loader: () => fetch('https://food-sharing-94c7e.web.app/foods'),
             },
             {
                 path: '/availableFoods',
                 element: <AvailableFoods />,
-                loader: () => fetch('http://localhost:5000/foods'),
+                loader: () => fetch('https://food-sharing-94c7e.web.app/foods'),
             },
             {
                 path: '/addFood',
