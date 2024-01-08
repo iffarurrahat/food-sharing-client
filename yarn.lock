@@ -2562,13 +2562,18 @@ react-countup@^6.5.0:
   dependencies:
     countup.js "^2.8.0"
 
-react-dom@^18.2.0, react-dom@>=15, react-dom@>=16.8, react-dom@>=18.0.0:
+react-dom@^18.2.0, "react-dom@>= 16.8.0 || 18.0.0", react-dom@>=15, react-dom@>=16.8, react-dom@>=18.0.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
+
+react-fast-marquee@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/react-fast-marquee/-/react-fast-marquee-1.6.2.tgz"
+  integrity sha512-bXUuW1r+Yzd8ZjsPmMDy8WJMubHAZd/7n0W/IzUQHtd0iBfxWohP6hzCFnEHWMCOtC9wxSAq/BiEnig4kdI2Vw==
 
 react-icons@^4.12.0:
   version "4.12.0"
@@ -2616,7 +2621,7 @@ react-simple-typewriter@^5.0.1:
   resolved "https://registry.npmjs.org/react-simple-typewriter/-/react-simple-typewriter-5.0.1.tgz"
   integrity sha512-vA5HkABwJKL/DJ4RshSlY/igdr+FiVY4MLsSQYJX6FZG/f1/VwN4y1i3mPXRyfaswrvI8xii1kOVe1dYtO2Row==
 
-react@*, react@^18.2.0, "react@>= 16.3.0", react@>=15, react@>=16.8, react@>=18.0.0:
+react@*, react@^18.2.0, "react@>= 16.3.0", "react@>= 16.8.0 || 18.0.0", react@>=15, react@>=16.8, react@>=18.0.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==

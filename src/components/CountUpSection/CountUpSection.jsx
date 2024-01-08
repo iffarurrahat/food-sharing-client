@@ -23,12 +23,12 @@ const CountUpSection = () => {
                         </div>
                         <div className='text-center text-white'>
                             <IoIosPeople className='text-5xl md:text-8xl mx-auto mb-2' />
-                            <p className='text-3xl font-bold'>{counterOn && <CountUp start={0} end={10} duration={2} delay={0} />} +</p>
+                            <p className='text-3xl font-bold'>{counterOn && <CountUp start={0} end={17} duration={2} delay={0} />} +</p>
                             <p className='font-medium mt-2'>Volunteers Registered</p>
                         </div>
                         <div className='text-center mt-5 md:mt-0 text-white'>
                             <IoMdHappy className='text-5xl md:text-8xl mx-auto mb-2' />
-                            <p className='text-3xl font-bold'>{counterOn && <CountUp start={0} end={10} duration={2} delay={0} />} +</p>
+                            <p className='text-3xl font-bold'>{counterOn && <CountUp start={0} end={35} duration={2} delay={0} />} +</p>
                             <p className='font-medium mt-2'>Emission Prevented</p>
                         </div>
                         <div className='text-center mt-5 md:mt-0 text-white'>
