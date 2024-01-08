@@ -8,7 +8,7 @@ import ManageFoods from "../page/ManageFoods/ManageFoods";
 import Login from "../page/Login/Login";
 import Register from "../page/Register/Register";
 import FoodCardDetails from "../components/HomeComponents/FoodCardDetails";
-import PrivateRoute from "./PrivateRoute";
+
 
 const myCreatedRoute = createBrowserRouter([
     {
@@ -18,21 +18,21 @@ const myCreatedRoute = createBrowserRouter([
             {
                 index: true,
                 element: <Home />,
-                loader: () => fetch('https://food-sharing-94c7e.web.app/foods'),
+                loader: () => fetch('http://localhost:5000/foods'),
             },
             {
                 path: '/food/:id',
-                element: <PrivateRoute><FoodCardDetails /></PrivateRoute>,
-                loader: () => fetch('https://food-sharing-94c7e.web.app/foods'),
+                element: <FoodCardDetails />,
+                loader: () => fetch('http://localhost:5000/foods'),
             },
             {
                 path: '/availableFoods',
                 element: <AvailableFoods />,
-                loader: () => fetch('https://food-sharing-94c7e.web.app/foods'),
+                loader: () => fetch('http://localhost:5000/foods'),
             },
             {
                 path: '/addFood',
-                element: <PrivateRoute><AddFood /></PrivateRoute>
+                element: <AddFood />
             },
             {
                 path: '/manageFood',
