@@ -12,7 +12,7 @@ const Banner = () => {
         <div className="h-[400px] md:h-[700px] lg:h-screen bg-slate-500 banner_img">
             <div className='flex justify-center items-center h-full'>
                 <h2 className='text-white text-center text-3xl md:text-4xl lg:text-7xl font-bold w-full md:w-2/3'>Welcome to Community
-                    <span className='font-bold'>
+                    <span className='text-primary'>
                         <Typewriter
                             words={[' Food Sharing🍊', ' Healthy Food🍓', ' Surplus Reduction Platform🍏']}
                             loop={false}

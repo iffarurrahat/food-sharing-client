@@ -4,9 +4,11 @@ const FoodIntroduction = () => {
     return (
         <Container>
             <div className="flex flex-col md:flex-row my-20 gap-8">
+                {/* <-!-----Left site Image-----> */}
                 <div className="flex-1">
                     <img className="w-[550px] h-[500px]" src="https://i.ibb.co/FwjzMDF/purpose-1.jpg" alt="" />
                 </div>
+                {/* <-!-----Right site content-----> */}
                 <div className="flex-1 flex items-center mb-2">
                     <div>
                         <p className="text-lg font-bold text-primary mb-3 ">Purpose</p>

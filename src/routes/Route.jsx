@@ -8,12 +8,14 @@ import ManageFoods from "../page/ManageFoods/ManageFoods";
 import Login from "../page/Login/Login";
 import Register from "../page/Register/Register";
 import FoodCardDetails from "../components/HomeComponents/FoodCardDetails";
+import ErrorPage from "../page/ErrorPage/ErrorPage";
 
 
 const myCreatedRoute = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout></MainLayout>,
+        errorElement: <ErrorPage />,
         children: [
             {
                 index: true,
