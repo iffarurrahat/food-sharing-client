@@ -10,15 +10,17 @@ const AvailableFoods = () => {
 
     return (
         <div className="pt-16">
+            {/* <-!------- top content --------> */}
             <div className="available__foods-img h-[150px] md:h-[250px]">
-                <div className='max-w-screen-xl mx-auto px-5 md:px-10 lg:px-0'>
-                    <p className='text-white text-2xl md:text-4xl font-extrabold pt-10 md:pt-20 text-center'>Available Foods <br /> <span className='text-[#F89223]'>Collections</span></p>
+                <div className='max-w-screen-xl mx-auto px-5 md:px-10 lg:px-0 relative'>
+                    <p className='text-white text-2xl md:text-4xl font-extrabold pt-10 md:pt-20 text-center'>Available Foods <br /> <span className='text-primary'>Collections</span></p>
                 </div>
             </div>
+            {/* <-!------- main content --------> */}
             <div>
                 <div className='max-w-screen-xl mx-auto px-5 md:px-10 lg:px-0 py-12'>
                     <div className='flex justify-around'>
-                        {/* search field */}
+                        {/* <-!------- search field --------> */}
                         <div className="form-control w-1/2">
                             <div className="input-group w-full">
                                 <input type="text" placeholder="Search…" className="input input-bordered w-full" />
@@ -27,7 +29,7 @@ const AvailableFoods = () => {
                                 </button>
                             </div>
                         </div>
-                        {/* short data */}
+                        {/* <-!------- short data --------> */}
                         <div className="form-control border rounded-lg">
                             <select className="select">
                                 <option disabled selected>Pick category</option>

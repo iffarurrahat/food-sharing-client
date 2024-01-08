@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../providers/AuthProvider";
-import { Link } from "react-router-dom";
 
 const AddFood = () => {
 
@@ -45,8 +44,8 @@ const AddFood = () => {
 
     return (
         <div className="py-24 md:w-2/3 mx-auto">
-            <div className="px-5 md:px-0 text-center">
-                <h2 className="text-3xl font-bold">Add a Foods</h2>
+            <div className="px-5 md:px-0 text-center mt-16 lg:mt-20 mb-5 md:mb-10">
+                <h2 className="text-4xl font-bold">Add a Foods</h2>
             </div>
             <form onSubmit={handleAddFood} className="card-body">
                 {/* input food_name and food_quantity */}

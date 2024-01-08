@@ -16,19 +16,19 @@ const Navbar = ({ children }) => {
 
     const navLink = <>
         <span>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-[#F89223] pb-[3px]' : ''} to='/'>Home</NavLink>
+            <NavLink className={({ isActive }) => isActive ? 'border-b-2 border-primary pb-[3px]' : ''} to='/'>Home</NavLink>
         </span>
         <span>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-[#F89223] pb-[3px]' : ''}       to='/availableFoods'>Available Foods</NavLink>
+            <NavLink className={({ isActive }) => isActive ? 'border-b-2 border-primary pb-[3px]' : ''}       to='/availableFoods'>Available Foods</NavLink>
         </span>
         <span>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-[#F89223] pb-[3px]' : ''}       to='/addFood'>Add Food</NavLink>
+            <NavLink className={({ isActive }) => isActive ? 'border-b-2 border-primary pb-[3px]' : ''}       to='/addFood'>Add Food</NavLink>
         </span>
         <span>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-[#F89223] pb-[3px]' : ''}       to='/manageFood'>Manage My Foods</NavLink>
+            <NavLink className={({ isActive }) => isActive ? 'border-b-2 border-primary pb-[3px]' : ''}       to='/manageFood'>Manage My Foods</NavLink>
         </span>
         <span>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-4 border-[#F89223] pb-[3px]' : ''}       to='/foodRequest'>My Food Request</NavLink>
+            <NavLink className={({ isActive }) => isActive ? 'border-b-2 border-primary pb-[3px]' : ''}       to='/foodRequest'>My Food Request</NavLink>
         </span>
 
         {
