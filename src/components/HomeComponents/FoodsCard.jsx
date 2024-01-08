@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { MdDateRange } from "react-icons/md";
 
 const FoodsCard = ({ food }) => {
 
@@ -6,9 +7,7 @@ const FoodsCard = ({ food }) => {
 
     return (
         <div className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-md p-6">
-            <div>
-                <img src={photo} alt="" />
-            </div>
+            <img className="rounded" src={photo} alt="" />
             <div className="relative flex items-center gap-4 pt-0 pb-8 mx-0 mt-4 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
                 <img
                     src={userPhoto}
@@ -21,7 +20,7 @@ const FoodsCard = ({ food }) => {
                             {userName}
                         </h5>
                         <div className="flex items-center gap-0 5">
-                            <p>{date}</p>
+                            <p className="flex items-center gap-2"><MdDateRange /> {date}</p>
                         </div>
                     </div>
                     <p className="block font-sans text-base antialiased font-light leading-relaxed text-blue-gray-900">

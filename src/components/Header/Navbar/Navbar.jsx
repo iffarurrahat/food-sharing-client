@@ -15,21 +15,21 @@ const Navbar = ({ children }) => {
     }
 
     const navLink = <>
-        <span>
+        <li>
             <NavLink className={({ isActive }) => isActive ? 'border-b-2 border-primary pb-[3px]' : ''} to='/'>Home</NavLink>
-        </span>
-        <span>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-2 border-primary pb-[3px]' : ''}       to='/availableFoods'>Available Foods</NavLink>
-        </span>
-        <span>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-2 border-primary pb-[3px]' : ''}       to='/addFood'>Add Food</NavLink>
-        </span>
-        <span>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-2 border-primary pb-[3px]' : ''}       to='/manageFood'>Manage My Foods</NavLink>
-        </span>
-        <span>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-2 border-primary pb-[3px]' : ''}       to='/foodRequest'>My Food Request</NavLink>
-        </span>
+        </li>
+        <li>
+            <NavLink className={({ isActive }) => isActive ? 'border-b-2 border-primary pb-[3px]' : ''} to='/availableFoods'>Available Foods</NavLink>
+        </li>
+        <li>
+            <NavLink className={({ isActive }) => isActive ? 'border-b-2 border-primary pb-[3px]' : ''} to='/addFood'>Add Food</NavLink>
+        </li>
+        <li>
+            <NavLink className={({ isActive }) => isActive ? 'border-b-2 border-primary pb-[3px]' : ''} to='/manageFood'>Manage My Foods</NavLink>
+        </li>
+        <li>
+            <NavLink className={({ isActive }) => isActive ? 'border-b-2 border-primary pb-[3px]' : ''} to='/foodRequest'>My Food Request</NavLink>
+        </li>
 
         {
             user?.email ?
@@ -66,10 +66,10 @@ const Navbar = ({ children }) => {
                         </div>
                         <div className="flex-1 flex justify-end md:justify-start px-2 mx-2 uppercase"><Logo /></div>
                         <div className="flex-none hidden md:block md:px-2 mx-2">
-                            <div className="flex gap-7">
+                            <ul className="flex gap-7">
                                 {/* Navbar menu content here */}
                                 {navLink}
-                            </div>
+                            </ul>
                         </div>
                     </Container>
                 </div>
@@ -78,10 +78,10 @@ const Navbar = ({ children }) => {
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
-                <div className="menu p-4 w-80 min-h-full bg-base-200 space-y-3">
+                <ul className="menu p-4 w-80 min-h-full bg-base-200 space-y-3">
                     {/* Sidebar content here */}
                     {navLink}
-                </div>
+                </ul>
             </div>
         </div>
     );

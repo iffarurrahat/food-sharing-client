@@ -1,6 +1,7 @@
+import { MdDateRange } from "react-icons/md";
 
 const AvailableFoodsCard = ({ food }) => {
-    const {  foodName, photo, quantity, location, date, notes, userName, userPhoto } = food || {};
+    const { foodName, photo, quantity, location, date, notes, userName, userPhoto } = food || {};
     return (
         <div className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-md p-6">
             <div>
@@ -18,7 +19,7 @@ const AvailableFoodsCard = ({ food }) => {
                             {userName}
                         </h5>
                         <div className="flex items-center gap-0 5">
-                            <p>{date}</p>
+                            <p className="flex items-center gap-2"><MdDateRange /> {date}</p>
                         </div>
                     </div>
                     <p className="block font-sans text-base antialiased font-light leading-relaxed text-blue-gray-900">
@@ -33,12 +34,12 @@ const AvailableFoodsCard = ({ food }) => {
                     {notes.slice(0, 120)}...
                 </p>
                 {/* <Link to={`/food/${_id}`}> */}
-                    <button
-                        className="block w-full select-none rounded-lg bg-blue-gray-900/10 px-6 mt-8 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                        type="button"
-                    >
-                        See Details
-                    </button>
+                <button
+                    className="block w-full select-none rounded-lg bg-blue-gray-900/10 px-6 mt-8 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"
+                >
+                    See Details
+                </button>
                 {/* </Link> */}
             </div>
         </div>

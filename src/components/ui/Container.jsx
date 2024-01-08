@@ -1,14 +1,7 @@
-import PropTypes from 'prop-types';
-
 const Container = ({ children }) => {
-    return (
-        <div className="w-full max-w-screen-xl mx-auto">
-            {children}
-        </div>
-    );
+  return (
+    <div className="w-full max-w-[1280px] px-3 md:px-[25px] mx-auto">{children}</div>
+  );
 };
 
-Container.propTypes = {
-    children: PropTypes.node
-};
 export default Container;

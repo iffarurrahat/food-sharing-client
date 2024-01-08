@@ -9,9 +9,9 @@ const FoodIntroduction = () => {
                 </div>
                 <div className="flex-1 flex items-center mb-2">
                     <div>
-                        <p className="text-lg font-medium">Purpose</p>
-                        <h2 className="text-4xl font-bold mb-8">The platform aims <br /> to reduce waste, end hunger, <br /> and build community</h2>
-                        <p className="">A Community Food Sharing and Surplus Reduction Platform is a digital initiative aimed at reducing food waste and fostering community unity. It connects individuals, businesses, and organizations with surplus food to those in need, promoting sustainability, and alleviating hunger while building strong local bonds.</p>
+                        <p className="text-lg font-bold text-primary mb-3 ">Purpose</p>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-8 w-full md:w-9/10">The platform aims to reduce waste, end hunger, and build community</h2>
+                        <p className="leading-7">A Community Food Sharing and Surplus Reduction Platform is a digital initiative aimed at reducing food waste and fostering community unity. It connects individuals, businesses, and organizations with surplus food to those in need, promoting sustainability, and alleviating hunger while building strong local bonds.</p>
                     </div>
                 </div>
             </div>
