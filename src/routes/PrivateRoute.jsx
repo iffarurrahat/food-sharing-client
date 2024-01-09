@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import Spinner from '../Spinner/Spinner';
 
 const PrivateRoute = ({ children }) => {
 
@@ -9,7 +10,7 @@ const PrivateRoute = ({ children }) => {
     const location = useLocation();
 
     if (loading) {
-        return <span className="loading loading-spinner loading-lg flex mx-auto items-center h-screen"></span>
+        return <Spinner />
     }
 
     if (user) {
@@ -24,4 +25,4 @@ export default PrivateRoute;
 
 PrivateRoute.propTypes = {
     children: PropTypes.node.isRequired,
-  };
+};
