@@ -9,7 +9,7 @@ const Foods = ({ foods }) => {
         <div className="mt-16 md:mt-24">
             {/* <-!------- top content ------> */}
             <div className="text-center mb-10 md:mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured <span className="text-primary">Foods</span></h2>
+                <h2 className="text-3xl md:text-5xl font-bold mb-4">Featured <span className="text-primary">Foods</span></h2>
                 <p>Empowering Communities to Share Surplus Food and Reduce <br /> Waste through a Dedicated Platform in Bangladesh.</p>
             </div>
             {/* <-!------- card content ------> */}

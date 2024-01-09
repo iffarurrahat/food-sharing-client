@@ -5,6 +5,7 @@ import Foods from "../../components/HomeComponents/Foods";
 import CountUpSection from "../../components/CountupSection/CountupSection";
 import WeDoSection from "../../components/WeDoSection/WeDoSection";
 import BrandPatternSection from "../../components/BrandPatternSection/BrandPatternSection";
+import WeConnectSection from "../../components/WeConnectSection/WeConnectSection";
 
 const Home = () => {
 
@@ -17,6 +18,7 @@ const Home = () => {
             <FoodIntroduction></FoodIntroduction>
             <CountUpSection />
             <WeDoSection />
+            <WeConnectSection />
             <BrandPatternSection />
         </div>
     );

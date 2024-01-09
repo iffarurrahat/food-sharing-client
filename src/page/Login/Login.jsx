@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FcGoogle } from 'react-icons/fc';
 import Swal from "sweetalert2";
+import Container from "../../components/ui/Container";
 
 const Login = () => {
 
@@ -42,24 +43,24 @@ const Login = () => {
             })
     }
 
-        // SignIn With Google
-        const handleGoogleSignIn = () => {
-            signInWithGoogle()
-                .then(result => {
-                    console.log(result.user);
-                    // navigate(location?.state ? location.state : '/')
-                })
-                .catch(error => {
-                    console.log(error);
-                })
-        }
+    // SignIn With Google
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(result => {
+                console.log(result.user);
+                // navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
 
 
     return (
         <div className="login__bg flex items-center justify-center h-[600px] md:h-screen">
             <div className="bg-[#171717c9] rounded shadow__bg">
                 <div className="flex items-center w-96">
-                    <form onSubmit={handleLogin}  className="card-body z-50">
+                    <form onSubmit={handleLogin} className="card-body z-50">
                         <h2 className="mb-1 text-2xl font-bold text-indigo-500">Please Login</h2>
                         <p className="mb-5 text-white">If you do not have an account ? <Link to="/register" className="font-semibold text-blue-600">Register</Link></p>
                         {/* input filed email and password */}
@@ -92,6 +93,7 @@ const Login = () => {
                 </div>
             </div>
         </div>
+
     );
 };
 
