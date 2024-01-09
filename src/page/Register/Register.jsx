@@ -1,6 +1,6 @@
 // ES6 Modules or TypeScript
 import Swal from 'sweetalert2'
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { getAuth, updateProfile } from 'firebase/auth';
 import app from '../../firebase/firebase.config';
@@ -13,6 +13,9 @@ const Register = () => {
 
     const { createUser } = useContext(AuthContext);
     const [registerError, setRegisterError] = useState('');
+
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleRegister = e => {
         e.preventDefault();
@@ -43,13 +46,17 @@ const Register = () => {
 
         createUser(email, password)
             .then(result => {
-                console.log(result.user)
+                // console.log(result.user);
                 e.target.reset();
                 Swal.fire(
                     'Good job!',
                     'You are successfully registered!',
                     'success'
-                )
+                );
+
+                // navigation after register
+                navigate(location?.state ? location.state : '/');
+
                 // update Profile
                 updateProfile(auth.currentUser, {
                     displayName: name,
@@ -57,6 +64,7 @@ const Register = () => {
                 })
                     .then(() => console.log('Profile updated'))
                     .catch()
+                    
             })
             .catch(error => {
                 console.log(error);
