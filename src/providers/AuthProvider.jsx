@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { createContext, useEffect, useState } from "react";
 import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import app from "../firebase/firebase.config";
@@ -61,4 +62,9 @@ const AuthProvider = ({ children }) => {
     );
 };
 
+
+
+AuthProvider.propTypes = {
+    children: PropTypes.node.isRequired
+};
 export default AuthProvider;

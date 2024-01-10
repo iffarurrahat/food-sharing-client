@@ -11,7 +11,7 @@ const WeConnectSection = () => {
             <Container>
                 <div className="">
                     {/* <-!----- video -----> */}
-                    <iframe className="w-full h-[300px] md:h-[550px] lg:h-screen" src="https://www.youtube.com/embed/8oCswLYXOtk?si=a6srHZQPXhSq4jqZ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe className="w-full h-[300px] md:h-[550px] lg:h-screen" src="https://www.youtube.com/embed/8oCswLYXOtk?si=a6srHZQPXhSq4jqZ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </div>
             </Container>
         </div>

@@ -1,6 +1,5 @@
 [
     {
-        "_id": "654be0fa4ac432447031e9e8",
         "foodName": "Vegetable Curry",
         "quantity": "32",
         "photo": "https://i.ibb.co/fpyVVhM/vegetable-curry.jpg",
@@ -13,7 +12,6 @@
         "userName": "ali akbor"
     },
     {
-        "_id": "654be25f4ac432447031e9e9",
         "foodName": "Chicken Biryani",
         "quantity": "14",
         "photo": "https://i.ibb.co/3778wxK/chicken-biryani.jpg",
@@ -26,7 +24,6 @@
         "userName": "ali akbor"
     },
     {
-        "_id": "654be4ba4ac432447031e9ea",
         "foodName": "Milk and Cookies",
         "quantity": "121",
         "photo": "https://i.ibb.co/6NBtDWL/milk-and-cookies.jpg",
@@ -39,7 +36,6 @@
         "userName": "ali akbor"
     },
     {
-        "_id": "654be55f4ac432447031e9eb",
         "foodName": "Fruit Salad",
         "quantity": "83",
         "photo": "https://i.ibb.co/7QgqXXN/fruit-salad.jpg",
@@ -52,7 +48,6 @@
         "userName": "ali akbor"
     },
     {
-        "_id": "654be6174ac432447031e9ec",
         "foodName": "Dhal and Vegetables",
         "quantity": "55",
         "photo": "https://i.ibb.co/94ZPfsm/dhal-and-vegetables.jpg",
@@ -65,7 +60,6 @@
         "userName": "ali akbor"
     },
     {
-        "_id": "654d0f35f20912f4660c31e4",
         "foodName": "Rice and Lentils",
         "quantity": "1532",
         "photo": "https://i.ibb.co/BCSX0Q0/rice-and-lentils.jpg",

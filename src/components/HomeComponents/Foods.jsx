@@ -1,9 +1,9 @@
+import PropTypes from 'prop-types';
 import Container from "../ui/Container";
 import FoodsCard from "./FoodsCard";
 
 const Foods = ({ foods }) => {
-
-    console.log(foods);
+    // console.log(foods);
 
     return (
         <div className="mt-16 md:mt-24">
@@ -23,5 +23,12 @@ const Foods = ({ foods }) => {
         </div>
     );
 };
+
+
+
+Foods.propTypes = {
+    foods: PropTypes.array.isRequired,
+};
+
 
 export default Foods;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import { MdDateRange } from "react-icons/md";
 
@@ -46,5 +47,11 @@ const FoodsCard = ({ food }) => {
         </div>
     );
 };
+
+
+FoodsCard.propTypes = {
+    food: PropTypes.object.isRequired,
+};
+
 
 export default FoodsCard;

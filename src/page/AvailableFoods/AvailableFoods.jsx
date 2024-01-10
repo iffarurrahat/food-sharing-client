@@ -6,7 +6,7 @@ import AvailableFoodsCard from './AvailableFoodsCard';
 const AvailableFoods = () => {
 
     const foods = useLoaderData();
-    console.log(foods);
+    // console.log(foods);
 
     return (
         <div className="pt-16">
@@ -32,7 +32,7 @@ const AvailableFoods = () => {
                         {/* <-!------- short data --------> */}
                         <div className="form-control border rounded-lg">
                             <select className="select">
-                                <option disabled selected>Pick category</option>
+                                <option  disabled selected>Pick category</option>
                                 <option>Date</option>
                                 <option>Food Name</option>
                             </select>
