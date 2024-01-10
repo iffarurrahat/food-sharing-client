@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import Container from "../ui/Container";
 import FoodsCard from "./FoodsCard";
+import { Link } from 'react-router-dom';
 
 const Foods = ({ foods }) => {
     // console.log(foods);
@@ -14,10 +15,15 @@ const Foods = ({ foods }) => {
             </div>
             {/* <-!------- card content ------> */}
             <Container>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
-                    {
-                        foods?.map(food => <FoodsCard key={food._id} food={food}></FoodsCard>)
-                    }
+                <div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {
+                            foods?.map(food => <FoodsCard key={food._id} food={food}></FoodsCard>)
+                        }
+                    </div>
+                    <div className='text-center  mt-10 md:mt-16'>
+                        <Link to="/availableFoods" className='bg-primary text-white py-3 px-4 rounded'> Show All</Link>
+                    </div>
                 </div>
             </Container>
         </div>

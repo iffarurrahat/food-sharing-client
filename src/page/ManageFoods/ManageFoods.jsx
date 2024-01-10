@@ -1,5 +1,49 @@
+import { useLoaderData } from "react-router-dom";
+import Container from "../../components/ui/Container";
+import ManageFoodsRow from "./ManageFoodsRow";
+import Swal from "sweetalert2";
+import { useState } from "react";
 
 const ManageFoods = () => {
+
+    const foodDonorsList = useLoaderData();
+
+    const [foodDonors, setFoodDonors ] = useState(foodDonorsList)
+
+    const handleDeleteFood = id => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be delete this food 😧",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // data fetch
+                fetch(`http://localhost:5000/foods/${id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        // console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your food has been deleted  🙂",
+                                icon: "success"
+                            });
+                            // after request cancel/delete than ui remain data show
+                            const remaining = foodDonors.filter(Donor => Donor._id !== id);
+                            setFoodDonors(remaining);
+                        }
+                    })
+            }
+        });
+    }
+
+
     return (
         <div className="pt-16">
             {/* <-!------- top content --------> */}
@@ -11,7 +55,40 @@ const ManageFoods = () => {
                 </div>
             </div>
             {/* <-!------- main content --------> */}
-            <div className="mb-20"></div>
+            <div className="mb-20">
+                <Container>
+                    <div className="py-10">
+                        <div className="overflow-x-auto">
+                            <table className="table table-zebra">
+                                {/* head */}
+                                <thead className="bg-primary text-white">
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Donar Image</th>
+                                        <th>Donar Name</th>
+                                        <th>Donar Location</th>
+                                        <th>Expired In Food</th>
+                                        <th>Food Name</th>
+                                        <th>Update</th>
+                                        <th>Delete</th>
+                                        <th>Manage Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        foodDonors.map((foodDonor, index) => <ManageFoodsRow
+                                            key={index}
+                                            index={index}
+                                            foodDonor={foodDonor}
+                                            handleDeleteFood={handleDeleteFood}
+                                        ></ManageFoodsRow>)
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </Container>
+            </div>
         </div>
     );
 };

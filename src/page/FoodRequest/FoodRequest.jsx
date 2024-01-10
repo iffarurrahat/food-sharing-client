@@ -38,7 +38,7 @@ const FoodRequest = () => {
                     .then(res => res.json())
                     .then(data => {
                         // console.log(data);
-                        if (data.deletedCount) {
+                        if (data.deletedCount > 0) {
                             Swal.fire({
                                 title: "Deleted!",
                                 text: "Your request has been canceled 🙂",

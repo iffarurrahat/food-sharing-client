@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 const FoodCardDetails = () => {
 
     const food = useLoaderData();
-    const { foodName, location, photo, notes, quantity, userName, date } = food || {}
+    const { foodName, location, photo, notes, quantity, userName, date, userPhoto: foodDonarPhoto, userName: foodDonarName } = food || {}
     const { user } = useContext(AuthContext);
 
     const handleFoodRequest = event => {
@@ -63,6 +63,8 @@ const FoodCardDetails = () => {
             <Container>
                 <img src={photo} alt="" className="mb-4 mx-auto w-full md:h-[450px] object-cover" />
                 <div className="bg-slate-100 p-4">
+                    <img className="h-40" src={foodDonarPhoto} alt="" />
+                    <h4 className="font-bold my-2">Donar Name: {foodDonarName}</h4>
                     <h4 className="text-2xl font-bold mb-2">Food Name: {foodName}</h4>
                     <p className="font-bold py-1">Location: {location}</p>
                     <p className="font-bold py-1">Quantity: {quantity}</p>

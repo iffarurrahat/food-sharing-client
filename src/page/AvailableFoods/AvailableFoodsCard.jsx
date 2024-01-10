@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const AvailableFoodsCard = ({ food }) => {
     const { _id ,foodName, photo, quantity, location, date, notes, userName, userPhoto } = food || {};
     return (
-        <div className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-md p-6">
+        <div className="relative flex w-full flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-md p-6">
             <div>
-                <img src={photo} alt="" />
+                <img src={photo} className='rounded' alt="" />
             </div>
             <div className="relative flex items-center gap-4 pt-0 pb-8 mx-0 mt-4 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
                 <img
