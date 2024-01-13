@@ -3,9 +3,8 @@ import { GiCancel } from "react-icons/gi";
 
 
 const FoodRequestRow = ({ request, index, handleCancelRequest }) => {
-    // console.log(request);
-    const { _id, donarName, pickupLocation, expiredDate, donationAmount, photo } = request || {}
-    // console.log('Food request booking:', _id);
+    const { _id, donarName, pickupLocation, expiredDate, donationAmount, photo, status } = request || {}
+    // console.log('Food request booking:', request);
 
 
     return (
@@ -24,7 +23,17 @@ const FoodRequestRow = ({ request, index, handleCancelRequest }) => {
             <td>{pickupLocation}</td>
             <td>{expiredDate}</td>
             <td>{donationAmount} Tk</td>
-            <th><button className="btn btn-ghost btn-xs">Pending</button></th>
+
+            <td>
+                {
+                    status === 'confirm' ?
+                        <span className="text-green-500">Confirmed</span>
+                        :
+                        <span className='cursor-pointer'>{status}</span>
+                }
+            </td>
+            {/* <th>{status}</th> */}
+
             <th><span onClick={() => handleCancelRequest(_id)}><GiCancel className="h-5 w-5 text-red-500 cursor-pointer" /></span> </th>
         </tr>
     );

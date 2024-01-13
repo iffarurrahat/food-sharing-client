@@ -7,8 +7,13 @@ import Swal from "sweetalert2";
 const FoodCardDetails = () => {
 
     const food = useLoaderData();
-    const { foodName, location, photo, notes, quantity, userName, date, userPhoto: foodDonarPhoto, userName: foodDonarName } = food || {}
+    // console.log('single food:', food);
+
+    const { foodName, location, photo, notes, quantity, userName, date, userPhoto: foodDonarPhoto, userName: foodDonarName, _id, email: foodDonarEmail, status } = food || {}
     const { user } = useContext(AuthContext);
+
+    // console.log('food donarId id:', foodDonarId);
+    // console.log('food donarId email:', foodDonarEmail);
 
     const handleFoodRequest = event => {
         event.preventDefault();
@@ -22,9 +27,12 @@ const FoodCardDetails = () => {
 
         const requested = {
             foodName,
+            foodDonarId: _id,
             donarName: userName,
+            foodDonarEmail,
             pickupLocation: location,
             expiredDate: date,
+            status,
             donationAmount: money,
             phone,
             comment,

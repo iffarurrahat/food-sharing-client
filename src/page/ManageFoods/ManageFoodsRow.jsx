@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { GiCancel } from "react-icons/gi";
 import { MdBrowserUpdated } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -7,9 +8,7 @@ const ManageFoodsRow = ({ foodDonor, index, handleDeleteFood }) => {
 
     const { _id, userName: donorName, userPhoto: donorPhoto, foodName, location, date } = foodDonor || {}
 
-    // console.log(foodDonor);
-
-
+    // console.log('Manage Food:', foodDonor);
 
     return (
         <tr className="border">
@@ -33,9 +32,19 @@ const ManageFoodsRow = ({ foodDonor, index, handleDeleteFood }) => {
                 </Link>
             </th>
             <th><span onClick={() => handleDeleteFood(_id)}><GiCancel className="h-5 w-5 text-red-500 cursor-pointer" /></span> </th>
-            <th><button className="btn btn-ghost btn-xs">Manage</button></th>
+
+            {/*<-!------- Manage single food ------>*/}
+            <th><Link to={`/managesinglefood/${_id}`}>Manage</Link></th>
+
         </tr>
     );
 };
 
+
+
+ManageFoodsRow.propTypes = {
+    foodDonor: PropTypes.object.isRequired,
+    index: PropTypes.number.isRequired,
+    handleDeleteFood: PropTypes.func.isRequired
+};
 export default ManageFoodsRow;

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { MdDateRange } from "react-icons/md";
 
 const FoodsCard = ({ food }) => {
-
     const { _id, foodName, photo, quantity, location, date, notes, userName, userPhoto } = food || {};
 
     return (

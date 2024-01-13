@@ -11,6 +11,7 @@ import FoodCardDetails from "../components/HomeComponents/FoodCardDetails";
 import ErrorPage from "../page/ErrorPage/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
 import ManageFoodsRowUpdate from "../page/ManageFoods/ManageFoodsRowUpdate";
+import ManageSingleFood from "../page/ManageFoods/ManageSingleFood";
 
 
 const myCreatedRoute = createBrowserRouter([
@@ -47,6 +48,11 @@ const myCreatedRoute = createBrowserRouter([
                 path: '/managefoodupdate/:id',
                 element: <ManageFoodsRowUpdate />,
                 loader: ({ params }) => fetch(`http://localhost:5000/foods/${params.id}`)
+            },
+            {
+                path: '/managesinglefood/:id',
+                element: <ManageSingleFood/>,
+                loader: ({params}) => fetch(`http://localhost:5000/foods/${params.id}`)
             },
             {
                 path: '/foodRequest',

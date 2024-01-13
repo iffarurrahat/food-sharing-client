@@ -9,6 +9,8 @@ const FoodRequest = () => {
     const [requests, setRequests] = useState([]);
     const { user } = useContext(AuthContext);
 
+    // console.log(requests);
+
     const url = `http://localhost:5000/requests?email=${user?.email}`
 
     useEffect(() => {

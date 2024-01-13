@@ -4,7 +4,7 @@ import FoodsCard from "./FoodsCard";
 import { Link } from 'react-router-dom';
 
 const Foods = ({ foods }) => {
-    // console.log(foods);
+    
 
     return (
         <div className="mt-16 md:mt-24">
