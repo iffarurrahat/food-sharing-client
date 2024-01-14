@@ -1,7 +1,11 @@
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const ManageSingleFoodRow = ({ manage, index, handleManageConfirm }) => {
-    const { _id, photo, pickupLocation, email, phone, donationAmount, status } = manage || {}
+    const { _id, photo, pickupLocation, email, phone, donationAmount, status, foodDonarEmail } = manage || {}
     // console.log(manage);
+
+    const { user } = useContext(AuthContext)
 
     return (
         <tr className="border">
@@ -21,11 +25,19 @@ const ManageSingleFoodRow = ({ manage, index, handleManageConfirm }) => {
             <th>{donationAmount} Tk</th>
             <th>
                 {
-                    status === 'confirm' ?
-                        <span className="text-green-500">Confirmed</span>
+                    foodDonarEmail === user?.email ?
+                        <span>
+                            {
+                                status === 'confirm' ?
+                                    <span className="text-green-500">Confirmed</span>
+                                    :
+                                    <span onClick={() => handleManageConfirm(_id)} className='cursor-pointer'>{status}</span>
+                            }
+                        </span>
                         :
-                        <span onClick={() => handleManageConfirm(_id)} className='cursor-pointer'>{status}</span>
+                        <span className="bg-primary text-white p-1 rounded">Authority Power</span>
                 }
+
             </th>
         </tr>
     );
