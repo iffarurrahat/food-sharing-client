@@ -13,7 +13,7 @@ const ManageSingleFood = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/manage/${id}`)
+        fetch(`https://food-sharing-server-omega.vercel.app/manage/${id}`)
             .then(res => res.json())
             .then(data => {
                 setManageFoods(data);
@@ -24,7 +24,7 @@ const ManageSingleFood = () => {
 
 
     const handleManageConfirm = id => {
-        fetch(`http://localhost:5000/manage/${id}`, {
+        fetch(`https://food-sharing-server-omega.vercel.app/manage/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

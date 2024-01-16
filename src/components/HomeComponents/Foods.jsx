@@ -4,8 +4,10 @@ import FoodsCard from "./FoodsCard";
 import { Link } from 'react-router-dom';
 
 const Foods = ({ foods }) => {
-    
 
+    console.log('foods', foods);
+    const featuredFood = foods?.filter(food => food.featured === "true")
+    
     return (
         <div className="mt-16 md:mt-24">
             {/* <-!------- top content ------> */}
@@ -18,7 +20,7 @@ const Foods = ({ foods }) => {
                 <div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {
-                            foods?.map(food => <FoodsCard key={food._id} food={food}></FoodsCard>)
+                            featuredFood?.map(food => <FoodsCard key={food._id} food={food}></FoodsCard>)
                         }
                     </div>
                     <div className='text-center  mt-10 md:mt-16'>

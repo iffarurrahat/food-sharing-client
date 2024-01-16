@@ -12,7 +12,7 @@ const FoodRequest = () => {
 
     // console.log(requests);
 
-    const url = `http://localhost:5000/requests?email=${user?.email}`
+    const url = `https://food-sharing-server-omega.vercel.app/requests?email=${user?.email}`
 
     useEffect(() => {
         fetch(url)
@@ -35,7 +35,7 @@ const FoodRequest = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 // data fetch
-                fetch(`http://localhost:5000/requests/${id}`, {
+                fetch(`https://food-sharing-server-omega.vercel.app/requests/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

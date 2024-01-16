@@ -19,7 +19,7 @@ const ManageFoodsRowUpdate = () => {
 
         const updateFood = { foodName, quantity, photo, location, date, notes}
 
-        fetch(`http://localhost:5000/foods/${foodUpdated._id}`, {
+        fetch(`https://food-sharing-server-omega.vercel.app/foods/${foodUpdated._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

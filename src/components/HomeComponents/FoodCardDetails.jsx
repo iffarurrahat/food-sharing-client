@@ -43,7 +43,7 @@ const FoodCardDetails = () => {
 
         // console.log(requested);
 
-        fetch('http://localhost:5000/requests', {
+        fetch('https://food-sharing-server-omega.vercel.app/requests', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

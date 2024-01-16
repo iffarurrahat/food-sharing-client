@@ -23,17 +23,17 @@ const myCreatedRoute = createBrowserRouter([
             {
                 index: true,
                 element: <Home />,
-                loader: () => fetch('http://localhost:5000/foods'),
+                loader: () => fetch('https://food-sharing-server-omega.vercel.app/foods'),
             },
             {
                 path: '/food/:id',
                 element: <FoodCardDetails />,
-                loader: ({ params }) => fetch(`http://localhost:5000/foods/${params.id}`),
+                loader: ({ params }) => fetch(`https://food-sharing-server-omega.vercel.app/foods/${params.id}`),
             },
             {
                 path: '/availableFoods',
                 element: <AvailableFoods />,
-                loader: () => fetch('http://localhost:5000/foods'),
+                loader: () => fetch('https://food-sharing-server-omega.vercel.app/foods'),
             },
             {
                 path: '/addFood',
@@ -42,17 +42,17 @@ const myCreatedRoute = createBrowserRouter([
             {
                 path: '/manageFood',
                 element: <ManageFoods />,
-                loader: () => fetch('http://localhost:5000/foods')
+                loader: () => fetch('https://food-sharing-server-omega.vercel.app/foods')
             },
             {
                 path: '/managefoodupdate/:id',
                 element: <ManageFoodsRowUpdate />,
-                loader: ({ params }) => fetch(`http://localhost:5000/foods/${params.id}`)
+                loader: ({ params }) => fetch(`https://food-sharing-server-omega.vercel.app/foods/${params.id}`)
             },
             {
                 path: '/managesinglefood/:id',
                 element: <ManageSingleFood/>,
-                loader: ({params}) => fetch(`http://localhost:5000/foods/${params.id}`)
+                loader: ({params}) => fetch(`https://food-sharing-server-omega.vercel.app/foods/${params.id}`)
             },
             {
                 path: '/foodRequest',
