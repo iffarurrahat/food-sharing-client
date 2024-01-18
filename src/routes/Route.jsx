@@ -41,7 +41,7 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: '/manageFood',
-                element: <ManageFoods />,
+                element: <PrivateRoute><ManageFoods /></PrivateRoute>,
                 loader: () => fetch('https://food-sharing-server-omega.vercel.app/foods')
             },
             {
@@ -56,7 +56,7 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: '/foodRequest',
-                element: <FoodRequest />
+                element: <PrivateRoute><FoodRequest /></PrivateRoute>
             }
         ],
     },
