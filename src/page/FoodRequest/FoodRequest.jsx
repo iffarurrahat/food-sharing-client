@@ -75,39 +75,47 @@ const FoodRequest = () => {
                     </div>
                 </div>
                 {/* <-!------- main content --------> */}
-                <div className="mb-20">
-                    <Container>
-                        <div className="py-10">
-                            <div className="overflow-x-auto">
-                                <table className="table table-zebra">
-                                    {/* head */}
-                                    <thead className="bg-primary text-white">
-                                        <tr>
-                                            <th>Id</th>
-                                            <th>Image</th>
-                                            <th>Donar Name</th>
-                                            <th>Pickup Location</th>
-                                            <th>Expired In</th>
-                                            <th>Donation Amount</th>
-                                            <th>Status</th>
-                                            <th>Cancel</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {
-                                            requests.map((request, index) => <FoodRequestRow
-                                                key={index}
-                                                index={index}
-                                                request={request}
-                                                handleCancelRequest={handleCancelRequest}
-                                            ></FoodRequestRow>)
-                                        }
-                                    </tbody>
-                                </table>
-                            </div>
+                {
+                    requests.length > 0 ?
+                        <div className="mb-20">
+                            <Container>
+                                <div className="py-10">
+                                    <div className="overflow-x-auto">
+                                        <table className="table table-zebra">
+                                            {/* head */}
+                                            <thead className="bg-primary text-white">
+                                                <tr>
+                                                    <th>Id</th>
+                                                    <th>Image</th>
+                                                    <th>Donar Name</th>
+                                                    <th>Pickup Location</th>
+                                                    <th>Expired In</th>
+                                                    <th>Donation Amount</th>
+                                                    <th>Status</th>
+                                                    <th>Cancel</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {
+                                                    requests.map((request, index) => <FoodRequestRow
+                                                        key={index}
+                                                        index={index}
+                                                        request={request}
+                                                        handleCancelRequest={handleCancelRequest}
+                                                    ></FoodRequestRow>)
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </Container>
                         </div>
-                    </Container>
-                </div>
+                        :
+                        <div className="py-24 md:py-48 text-center">
+                            <h1 className="text-2lx md:text-3xl font-bold">You do not have any request</h1>
+                            <p>Please, If you need any food <br /> then you can request for foods</p>
+                        </div>
+                }
             </div>
         </>
     );

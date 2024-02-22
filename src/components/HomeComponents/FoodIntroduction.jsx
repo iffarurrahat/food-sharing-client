@@ -6,7 +6,7 @@ const FoodIntroduction = () => {
             <div className="flex flex-col md:flex-row my-20 gap-8">
                 {/* <-!-----Left site Image-----> */}
                 <div className="flex-1">
-                    <img className="w-[550px] h-[500px]" src="https://i.ibb.co/FwjzMDF/purpose-1.jpg" alt="" />
+                    <img className="w-[550px] h-[500px] rounded object-center" src="https://i.ibb.co/FwjzMDF/purpose-1.jpg" alt="" />
                 </div>
                 {/* <-!-----Right site content-----> */}
                 <div className="flex-1 flex items-center mb-2">
