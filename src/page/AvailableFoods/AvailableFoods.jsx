@@ -7,7 +7,6 @@ import { Helmet } from 'react-helmet-async';
 const AvailableFoods = () => {
 
     const foods = useLoaderData();
-    // console.log(foods);
 
     return (
         <>

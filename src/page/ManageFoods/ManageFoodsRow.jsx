@@ -8,8 +8,6 @@ const ManageFoodsRow = ({ foodDonor, index, handleDeleteFood }) => {
 
     const { _id, userName: donorName, userPhoto: donorPhoto, foodName, location, date } = foodDonor || {}
 
-    // console.log('Manage Food:', foodDonor);
-
     return (
         <tr className="border">
             <th>{index + 1}</th>

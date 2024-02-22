@@ -16,7 +16,6 @@ const AddFood = () => {
         const location = form.location.value;
         const date = form.date.value;
         const notes = form.notes.value;
-        // console.log(name, quantity, photo, location, date, notes);
 
         const newFoods = { foodName, quantity, photo, location, date, notes, status: "available", email: user?.email, userPhoto: user?.photoURL, userName: user?.displayName }
 
@@ -29,7 +28,6 @@ const AddFood = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',

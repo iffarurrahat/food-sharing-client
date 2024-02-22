@@ -26,7 +26,6 @@ const Register = () => {
         const email = form.get('email');
         const password = form.get('password');
         const gender = form.get('gender');
-        console.log(name, photo, contact, email, password, gender);
 
         // reset error
         setRegisterError('');
@@ -46,7 +45,6 @@ const Register = () => {
 
         createUser(email, password)
             .then(result => {
-                // console.log(result.user);
                 e.target.reset();
                 Swal.fire(
                     'Good job!',

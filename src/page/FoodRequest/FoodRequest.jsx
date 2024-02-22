@@ -10,7 +10,6 @@ const FoodRequest = () => {
     const [requests, setRequests] = useState([]);
     const { user } = useContext(AuthContext);
 
-    // console.log(requests);
 
     const url = `https://food-sharing-server-omega.vercel.app/requests?email=${user?.email}`
 
@@ -40,7 +39,6 @@ const FoodRequest = () => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        // console.log(data);
                         if (data.deletedCount > 0) {
                             Swal.fire({
                                 title: "Deleted!",

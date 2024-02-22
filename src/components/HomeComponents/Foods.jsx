@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 const Foods = ({ foods }) => {
 
-    console.log('foods', foods);
     const featuredFood = foods?.filter(food => food.featured === "true")
     
     return (

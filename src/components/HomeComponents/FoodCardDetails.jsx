@@ -8,13 +8,9 @@ import { Helmet } from "react-helmet-async";
 const FoodCardDetails = () => {
 
     const food = useLoaderData();
-    // console.log('single food:', food);
 
     const { foodName, location, photo, notes, quantity, userName, date, userPhoto: foodDonarPhoto, userName: foodDonarName, _id, email: foodDonarEmail, status } = food || {}
     const { user } = useContext(AuthContext);
-
-    // console.log('food donarId id:', foodDonarId);
-    // console.log('food donarId email:', foodDonarEmail);
 
     const handleFoodRequest = event => {
         event.preventDefault();
@@ -41,8 +37,6 @@ const FoodCardDetails = () => {
             photo,
         }
 
-        // console.log(requested);
-
         fetch('https://food-sharing-server-omega.vercel.app/requests', {
             method: "POST",
             headers: {
@@ -52,7 +46,6 @@ const FoodCardDetails = () => {
         })
             .then(res => res.json())
             .then(data => {
-                // console.log(data);
                 if (data.insertedId) {
                     // request delivered alert
                     Swal.fire({

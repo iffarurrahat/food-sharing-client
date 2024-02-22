@@ -5,7 +5,6 @@ import Swal from "sweetalert2";
 const ManageFoodsRowUpdate = () => {
 
     const foodUpdated = useLoaderData();
-    console.log('food data:', foodUpdated);
 
     const handleManageFoodUpdate = e => {
         e.preventDefault();
@@ -28,7 +27,6 @@ const ManageFoodsRowUpdate = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: "Good job!",

@@ -7,10 +7,7 @@ const ManageSingleFood = () => {
 
     const [manageFoods, setManageFoods] = useState([]);
 
-
     const { id } = useParams();
-    // console.log(params);
-
 
     useEffect(() => {
         fetch(`https://food-sharing-server-omega.vercel.app/manage/${id}`)
@@ -19,8 +16,6 @@ const ManageSingleFood = () => {
                 setManageFoods(data);
             });
     }, [id]);
-
-    // console.log(manageFoods);
 
 
     const handleManageConfirm = id => {
@@ -34,7 +29,6 @@ const ManageSingleFood = () => {
         })
             .then(res => res.json())
             .then(data => {
-                // console.log(data);
                 if (data.modifiedCount > 0) {
                     // updated status
                     const remaining = manageFoods.filter(manage => manage._id !== id);

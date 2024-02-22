@@ -3,7 +3,6 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 const ManageSingleFoodRow = ({ manage, index, handleManageConfirm }) => {
     const { _id, photo, pickupLocation, email, phone, donationAmount, status, foodDonarEmail } = manage || {}
-    // console.log(manage);
 
     const { user } = useContext(AuthContext)
 

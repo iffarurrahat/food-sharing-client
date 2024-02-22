@@ -4,8 +4,6 @@ import { GiCancel } from "react-icons/gi";
 
 const FoodRequestRow = ({ request, index, handleCancelRequest }) => {
     const { _id, donarName, pickupLocation, expiredDate, donationAmount, photo, status } = request || {}
-    // console.log('Food request booking:', request);
-
 
     return (
         <tr className="border">
